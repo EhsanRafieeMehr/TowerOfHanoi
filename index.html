@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Tower of Hanoi</title>
+		<link rel="shortcut icon" href="./Tower Of Hanoi.png" type="image/x-icon" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap"
+			rel="stylesheet"
+		/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="author" content="EhsanRafieeMehr" />
+		<meta name="description" content="Hanoi tower interactive animation" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body class="theme theme--light">
+		<header class="header">
+			<h1 class="header__title">Hanoi Tower</h1>
+			<button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+		</header>
+
+		<main class="main">
+			<section class="controls">
+				<label class="controls__label">
+					Disks:
+					<select class="controls__select" id="diskCount">
+						<option selected>3</option>
+						<option>4</option>
+						<option>5</option>
+						<option>6</option>
+						<option>7</option>
+						<option>8</option>
+					</select>
+				</label>
+				<button class="controls__btn controls__btn--start" id="startBtn">Start</button>
+				<button class="controls__btn controls__btn--pause" id="pauseBtn">Pause</button>
+				<button class="controls__btn controls__btn--reset" id="resetBtn">Reset</button>
+				<label class="controls__label controls__label--speed">
+					Speed
+					<input
+						type="range"
+						min="1"
+						max="100"
+						value="50"
+						class="controls__slider"
+						id="speedInput"
+					/>
+				</label>
+			</section>
+
+			<section class="progress">
+				<div class="progress__bar" id="progressBar"></div>
+			</section>
+			<p class="progress__info" id="progressInfo">Moves: 0 / 0 | 0%</p>
+
+			<section class="hanoi">
+				<div class="hanoi__peg" id="pegA"></div>
+				<div class="hanoi__peg" id="pegB"></div>
+				<div class="hanoi__peg" id="pegC"></div>
+				<!-- <section class="logs" id="logs"></section> -->
+			</section>
+
+			<div class="peg-labels">
+				<span class="peg-labels__item">1</span>
+				<span class="peg-labels__item">2</span>
+				<span class="peg-labels__item">3</span>
+			</div>
+
+			<section class="logs" id="logs"></section>
+		</main>
+		<footer>
+			<div class="contain-footer-info">
+				<span class="made-with">Made With</span>
+				<svg class="by-heart" version="1.1" width="50px" height="34px" viewBox="0 0 90.65 85.04">
+					<path
+						class="by-heart-path"
+						fill="none"
+						stroke="#f44336"
+						stroke-width="5"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-miterlimit="10"
+						d="
+        M45.137,23.041c4.912-24.596,40.457-27.775,42.128-0.435c1.398,22.88-21.333,40.717-42.128,50.522 M45.137,23.041
+        C40.225-1.555,5.057-4.734,3.387,22.606c-1.398,22.88,20.955,40.717,41.75,50.522"
+					/>
+				</svg>
+				<span class="by"
+					>By<a href="https://github.com/EhsanRafieeMehr" class="byline" target="_blank">
+						EhsanRafieeMehr</a
+					>
+					&#8482;</span
+				>
+			</div>
+		</footer>
+
+		<script src="script.js"></script>
+	</body>
+</html>
